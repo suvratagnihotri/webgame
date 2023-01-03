@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/main.css}"/>
+        <script type = "text/javascript" th:src="@{/js/main.js}"></script>
+    </head>
+    <body>
+        <form id="usernameform" class="usernameform" th:action="@{/gamelist}" th:object="${user}" method="post">
+            <div class="usernamecontainer">
+                <input th:field="*{username}" type="text" id="username" class="username" placeholder="Enter your name">
+            </div>
+            <div class="submitcontainer">
+                <button type="submit" id="submit">Okay</button>
+            </div>
+        </form>
+    </body>
+</html>

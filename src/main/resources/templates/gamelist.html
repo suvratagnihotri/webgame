@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/gamelist.css}"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+        <script type = "text/javascript" th:src="@{/js/gamelist.js}"></script>
+        <script type = "text/javascript" th:src="@{/js/jquery.js}"></script>
+
+    </head>
+    <body>
+        <div class="newGameContainer" style="display: none;">
+            <button id="newGameButton" type="submit" onclick="newGame()">New Game</button>
+        </div>
+        <div>
+            <span id="username" th:text="${user}" style="display: none;"></span>
+            <span id="myvar" th:text="${gamelist}" style="display: none;"></span>
+        </div>
+        <div class="container">
+            <div class="grid-container">
+                    <div class="grid-item">
+                        <button type="submit" id="1" class="item-button" onclick="changeButton()" >
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="2" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="3" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="4" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="5" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="6" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="7" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="8" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button type="submit" id="9" class="item-button" onclick="changeButton()">
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
