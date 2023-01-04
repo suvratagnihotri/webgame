@@ -16,11 +16,12 @@ public class GameList {
             if(games==null){
                 return null;
             }
-            games.forEach((k, v) -> {
-                if(v.getPlayer2().length()>2){
-                    games.remove(k);
+            // games.forEach((k, v) -> {if(v.getPlayer2().length()>2){games.remove(k);}});
+            for(Map.Entry<String,GameData> entry:games.entrySet()){
+                if(entry.getValue().getPlayer2().length()>2){
+                    games.remove(entry.getKey());
                 }
-            });
+            }
         }
         catch(Exception exception){
             System.out.println(exception.getLocalizedMessage());
