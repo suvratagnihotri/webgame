@@ -1,0 +1,59 @@
+body{
+}
+
+.usernameform{
+    width: 350px;
+    height: 180px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin:auto;
+    border-style:solid;
+    border-color:#5e5959;
+    border-radius:5px;
+    display:inline-block;
+    text-align:center;
+    padding-top:100px;
+}
+
+input{
+    width:200px;
+    height:30px;
+    text-align: center;
+    outline:none;
+    border-radius:5px;
+    transition: transform .6s;
+    caret-color: #171c1f;
+}
+
+::placeholder { 
+  color: #171c1f;
+  opacity: 1;
+}
+
+input:hover{
+    border-style:dashed;
+    transform: scale(1.1);
+}
+
+button{
+    background-color:#0c88e1;
+    color:white;
+    width:100px;
+    height:30px;
+    border-style:groove;
+    border-color:black;
+    border-radius:5px;
+    outline:none;
+    margin-top:20px;
+    transition: transform .6s;
+}
+
+button:hover{
+    cursor:pointer;
+    border-color:#042740;
+    border-style:none;
+    transform: scale(1.1);
+}

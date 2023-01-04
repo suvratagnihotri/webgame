@@ -6,7 +6,7 @@
     </head>
     <body>
         <form id="usernameform" class="usernameform" th:action="@{/gamelist}" th:object="${user}" method="post">
-            <div class="usernamecontainer">
+            <div class="usernamecontainer" id="usernamecontainer">
                 <input th:field="*{username}" type="text" id="username" class="username" placeholder="Enter your name">
             </div>
             <div class="submitcontainer">
