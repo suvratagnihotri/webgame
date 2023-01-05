@@ -1,33 +1,116 @@
 .container{
-    background-color: rgb(236, 120, 25);
-    width: 100vmax;
-    height: 100vmax;
-    display: none;
+  width: 100vmax;
+  height: 100vmax;
+  display: none;
 }
 
 .grid-container {
-    width: 600px;
-	height: 600px;
-	margin: 0 auto;
-    background-color: #34495e;
-    color: #fff;
-    border: 6px solid #2c3e50;
-    border-radius: 10px;
-	display: grid;
-	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  }
-  
-  .grid-item {
-    border: 6px solid #2c3e50;
-    border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 600px;
+height: 600px;
+margin: 0 auto;
+  background-color: black;
+  color: #fff;
+  border: 6px solid black;
+  border-radius: 10px;
+display: grid;
+grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
 
-  .item-button {
-    background: teal;
-    width: 180px;
-    height: 180px;
-    font-size: -webkit-xxx-large;
+.grid-item {
+  border: 6px solid #2c3e50;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline:none;
+}
+
+.item-button {
+  background: #0c88e1;
+  width: 180px;
+  height: 180px;
+  font-size: -webkit-xxx-large;
+  transition:0.5s;
+  border-style:solid;
+  outline:none;
+  border-radius:5px;
+}
+
+.item-button:hover{
+  transform: scale(1.025);
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.newGameContainer{
+width:100px;
+height:100px;
+top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+margin:auto;
+position: absolute;
+
+}
+
+#newGameButton{
+width:150px;
+height:40px;
+border-style:solid;
+outline:none;
+transition:0.6s;
+background-color:#0c88e1;
+color:white;
+border-radius:5px;
+}
+
+#newGameButton:hover{
+border-style:none;
+cursor:pointer;
+transform: scale(1.1);
+}
+
+table{
+  width:350px;
+  height:50px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  position:absolute;
+  border-style:solid;
+  border-radius:5px;
+}
+
+td{
+  border-style:solid;
+  border-radius:5px;
+  border-color:black;
+  text-align:center;
+  transition:0.6s;
+}
+
+td:hover{
+  transform:scale(1.011);
+}
+
+.btn{
+  width:100px;
+  height:40px;
+  margin-left:20px;
+  border-style:solid;
+  border-radius:5px;
+  outline:none;
+  color:white;
+  transition:0.6s;
+  background-color:#0c88e1;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  cursor:pointer;
+  border:none;
 }

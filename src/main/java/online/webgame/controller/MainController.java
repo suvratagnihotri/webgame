@@ -26,7 +26,7 @@ import online.webgame.services.GameState;
 public class MainController {
     private UserList userData = new UserList();
     private GameList gameList = new GameList();
-    private GameData gameData = new GameData();
+    private GameData gameData; 
     @GetMapping("/")
     public String entryPage(Model model){
         model.addAttribute("user", new User());
@@ -109,13 +109,14 @@ public class MainController {
         System.out.println(chatMessage);
         JSONObject jsonObject = new JSONObject(chatMessage);
         System.out.println(jsonObject.getString("gameId"));
-        gameData.setGameId(jsonObject.getString("gameId"));
-        gameData.setPlayer1(jsonObject.getString("player1"));
-        gameData.setPlayer2(jsonObject.getString("player2"));
-        gameList.setGames(gameData.getGameId(),gameData);
+        this.gameData = new GameData();
+        this.gameData.setGameId(jsonObject.getString("gameId"));
+        this.gameData.setPlayer1(jsonObject.getString("player1"));
+        this.gameData.setPlayer2(jsonObject.getString("player2"));
+        this.gameList.setGames(this.gameData.getGameId(),this.gameData);
         headerAccessor.getSessionAttributes().put("username",username);
-        if(gameData.getPlayer2().length()>2){
-            messagingTemplate.convertAndSend("/start/initial."+gameData.getPlayer1(),chatMessage);
+        if(this.gameData.getPlayer2().length()>2){
+            messagingTemplate.convertAndSend("/start/initial."+this.gameData.getPlayer1(),chatMessage);
         }
         else{
             messagingTemplate.convertAndSend("/start/initial."+username,chatMessage);

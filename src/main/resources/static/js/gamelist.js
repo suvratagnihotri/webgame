@@ -105,7 +105,7 @@ window.onload = function() {
         console.log("No game is present.");
         newGameElement = document.getElementsByClassName("newGameContainer")[0];
         newGameElement.style.display = "block";
-        
+        tbl.style.display="none";
     }
     else{
         for (var key in obj) {
@@ -138,7 +138,7 @@ function connect(event) {
         // userNamePage.classList.add('hidden');
         // chatPage.classList.remove('hidden');
 
-        var socket = new SockJS('http://192.168.214.246:8080/testchat');
+        var socket = new SockJS('http://localhost:8080/testchat');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);
