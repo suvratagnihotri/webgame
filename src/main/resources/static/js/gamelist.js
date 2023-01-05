@@ -257,6 +257,11 @@ function onMessageReceived(payload) {
             window.alert("You won the game!");
             reloadGame();
         }
+        else if(receivedData["gameresult"][0]==="draw"){
+            window.alert("Game Draw");
+            reloadGame();
+        }
+
     }
 }
 

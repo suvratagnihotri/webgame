@@ -90,6 +90,10 @@ public class MainController {
                 messagingTemplate.convertAndSend("/start/initial."+player2,jsonObject3.append("gameresult", "loser").toString());
                 messagingTemplate.convertAndSend("/start/initial."+player1,jsonObject.append("gameresult", "winner").toString());
             }
+            else if(winner.toLowerCase().contains("draw")){
+                messagingTemplate.convertAndSend("/start/initial."+player2,jsonObject3.append("gameresult", "draw").toString());
+                messagingTemplate.convertAndSend("/start/initial."+player1,jsonObject.append("gameresult", "draw").toString());
+            }
         }
         else{
             System.out.println("###############################");

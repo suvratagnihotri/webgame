@@ -50,6 +50,9 @@ public class GameState {
         else if(vo3.equals(vo6) && vo6.equals(vo9) && vo9.equals(vo3) && vo3.trim().length()>0){
             return vo3;
         }
+        else if(vo1.length() >0 && vo2.length() >0 && vo3.length() >0 && vo4.length()>0 && vo5.length()>0 &&  vo5.length()>0 && vo6.length()>0 && vo7.length() >0 && vo8.length()>0 && vo9.length()>0){
+            return "draw";
+        }
         return "none";
     }
 }
