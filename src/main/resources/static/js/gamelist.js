@@ -53,6 +53,14 @@ function newGame() {
     // }
 }
 
+function computerPlayer(){
+    player2 = "computer";
+    // connect();
+    newGameElement.style.display = "none";
+    containerlement.style.display = "block";
+
+}
+
 function enableButton(){
     $('#1').prop('disabled', false);
     $('#2').prop('disabled', false);
@@ -138,7 +146,7 @@ function connect(event) {
         // userNamePage.classList.add('hidden');
         // chatPage.classList.remove('hidden');
 
-        var socket = new SockJS('http://localhost:8080/testchat');
+        var socket = new SockJS('http://192.168.0.192:8080/testchat');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);

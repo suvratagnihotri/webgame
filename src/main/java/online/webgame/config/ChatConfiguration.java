@@ -20,7 +20,7 @@ public class ChatConfiguration  implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry
                 .addEndpoint("/testchat")
-                .setAllowedOrigins("http://localhost:8080","http://eparinay.spring.test","http://192.168.0.192:8080")
+                .setAllowedOriginPatterns("*")
                 .withSockJS();
     }
 }
